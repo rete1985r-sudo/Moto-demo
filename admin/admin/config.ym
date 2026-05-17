@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: rete1985r-sudo/Moto-demo  # Укажите ваше имя пользователя и репозиторий
+  branch: main
+
+media_folder: "static/images/uploads" # Папка для загруженных картинок
+public_folder: "/static/images/uploads"
+
+collections:
+  - name: "bike"          # Название коллекции (для вас)
+    label: "Мотоциклы"    # Как это будет называться в интерфейсе
+    folder: "_data/bikes" # Папка, где будут храниться файлы
+    create: true
+    fields:
+      - {label: "Название модели", name: "title", widget: "string"}
+      - {label: "Год и характеристики", name: "specs", widget: "string"}
+      - {label: "Цена", name: "price", widget: "string"}
+      - {label: "Фото", name: "image", widget: "image"}
+      - {label: "Статус", name: "status", widget: "select", options: ["В НАЛИЧИИ", "ПОД ЗАКАЗ", "ПРОДАНО"]}
